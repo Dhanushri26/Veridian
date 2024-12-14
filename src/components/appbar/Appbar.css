@@ -1,0 +1,15 @@
+
+
+.menu-item {
+  padding-bottom: 0px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.menu-item.selected {
+  border-bottom: 2px solid #009065; 
+}
+
+.menu-item-typo {
+  font-size: 1.2em;
+}
