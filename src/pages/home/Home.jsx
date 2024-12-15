@@ -5,6 +5,7 @@ import Boxes from "../../components/boxes/Boxes";
 import Investments from "../../components/investments/Investments";
 import Footer from "../../components/footer/Footer";
 import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+import TeamSlider from "../../components/slider/TeamSlider";
 
 const theme = createTheme({
   typography: {
@@ -18,16 +19,15 @@ const Home = () => {
       <CssBaseline /> 
     <Box sx={style.home}>
       <Box sx={style.top}>
-        <Appbar />
+        <Appbar sx={{zIndex:1000,position:'sticky',top:0}}/>
       </Box>
       <Box sx={style.banner1}>
-        <Intro />
+        <Intro sx={{zIndex:2}}/>
       </Box>
       <Boxes />
+      <TeamSlider sx={style.slider}/>
       <Investments />
-      {/* <Box sx={style.bottom}>
-        <Typography sx={style.copyright}>COPYRIGHT © Veridian 2024. All rights reserved. Any and all content included on this website or incorporated by reference is protected by international copyright laws.</Typography>
-      </Box> */}
+      
       <Footer/>
     </Box>
     </ThemeProvider>
@@ -55,4 +55,5 @@ const style = {
     color: "white",
     textAlign: "center",
   },
+  
 };

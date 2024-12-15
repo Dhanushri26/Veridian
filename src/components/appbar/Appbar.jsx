@@ -40,13 +40,15 @@ const style = {
   appBar: {
     backgroundColor: "white",
     color: "gray",
-    height: "5em",
+    height: "6em",
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
     boxShadow: "none",
     borderBottom:'1px solid lightgray',
+    // position:'sticky',
+    
   },
   menu: {
     flexGrow: 1,
@@ -59,10 +61,13 @@ const style = {
   menuItem: {
     paddingBottom: "2px",
     display:'inline-block',
-    height:'2.5em'
+    height:'2.5em',
+    fontWeight:'bold',
   },
   menuItemTypo: {
     fontSize: "1.2em",
+    fontWeight: "semibold",
+    color: "black",
   },
   top:{
     display:'flex',

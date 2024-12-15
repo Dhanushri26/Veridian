@@ -33,8 +33,8 @@ const Investments = () => {
         <Typography sx={style.investtitle}>Hoslistic Investment Approach</Typography>
         <Box sx={style.details}>
           {invests.map((item) => (
-            <Grid2 xs={3} key={item.id} container spacing={5} sx={style.grid}>
-              <Box>
+            <Grid2 xs={3} key={item.id} container spacing={3} sx={style.grid}>
+              <Box sx={style.container}>
               <img src={item.image} alt={item.title} style={{marginTop:'1rem',paddingBottom:0,height:'10rem'}} />
               <Typography sx={style.containertitle}>{item.title}</Typography>
               {/* <Typography sx={style.containertext}>{item.description}</Typography> */}
@@ -74,8 +74,9 @@ const style = {
   details: {
     display: "flex",
     justifyContent: "space-between",
-    paddingLeft: "1rem",
-    paddingRight: "1rem",
+    paddingLeft: "3rem",
+    paddingRight: "3rem",
+
   
   },
   grid: {
@@ -87,6 +88,7 @@ const style = {
     backgroundColor: "white",
     width: "30%",
     height: "37em",
+    
   },
   investtitle: {
     color: "black",
@@ -107,4 +109,5 @@ const style = {
     textAlign:'Left',
     margin:'0.5rem 0 0 1rem',
   },
+  
 };
