@@ -1,35 +1,56 @@
-import { Box,} from "@mui/material";
+import { Box } from "@mui/material";
 import Appbar from "../../components/appbar/Appbar";
 import Intro from "../../components/intro/Intro";
 import Boxes from "../../components/boxes/Boxes";
 import Investments from "../../components/investments/Investments";
 import Footer from "../../components/footer/Footer";
-import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
-import TeamSlider from "../../components/slider/TeamSlider";
+import { createTheme, ThemeProvider } from "@mui/material";
+import useSectionStore from "../../useSectionStore";
+import { useEffect } from "react";
+// import Sliding from "../../components/slider/Sliding";
+// import Sliding from "../../components/slider/Sliding";
+// import Profile1 from "../../components/profiles/Profile1";
+// import TeamSlider from "../../components/slider/TeamSlider";
 
 const theme = createTheme({
   typography: {
-    fontFamily: '"DM Sans", sans-serif', 
-    fontStyle:'italic',
+    fontFamily: '"IBM Plex Serif","DM Sans", sans-serif',
+    fontStyle: "italic",
+    fontWeightMedium: 400,
+    fontWeight: 300,
   },
 });
 const Home = () => {
+  const { selectedSection } = useSectionStore();
+  console.log(selectedSection);
+
+  useEffect(() => {
+    const normalizedSection = selectedSection.toLowerCase().replace(/\s+/g, ' ');
+    const sectionElement = document.getElementById(normalizedSection);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [selectedSection]);
   return (
-    <ThemeProvider theme={theme}> 
-      <CssBaseline /> 
-    <Box sx={style.home}>
-      <Box sx={style.top}>
-        <Appbar sx={{zIndex:1000,position:'sticky',top:0}}/>
+    <ThemeProvider theme={theme}>
+      {/* <CssBaseline /> */}
+      <Box sx={style.home}>
+        <Appbar />
+        <div id="Home">
+          <Intro /> {/* Home */}
+        </div>
+        <div id="About Us">
+          <Boxes />
+        </div>{" "}
+        {/* "About Us", */}
+        {/* "Our Team", */}
+        <div id="Investment Approach">
+          <Investments /> {/* "Investment Approach", */}
+        </div>
+        <div id="Contact Us">
+          <Footer /> {/* "Contact Us", */}
+        </div>
       </Box>
-      <Box sx={style.banner1}>
-        <Intro sx={{zIndex:2}}/>
-      </Box>
-      <Boxes />
-      <TeamSlider sx={style.slider}/>
-      <Investments />
-      
-      <Footer/>
-    </Box>
     </ThemeProvider>
   );
 };
@@ -55,5 +76,4 @@ const style = {
     color: "white",
     textAlign: "center",
   },
-  
 };

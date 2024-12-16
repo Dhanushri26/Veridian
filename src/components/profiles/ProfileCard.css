@@ -1,0 +1,118 @@
+.profile-card {
+  width: 100%;
+  max-width:1000px;
+  padding: 2em;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 2%;
+  height: 20em;
+  padding-inline: 4em;
+ }
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  position: relative;
+  transform: skewX(-20deg);
+  width:'96%';
+  padding: 1em;
+  text-align: left;
+  margin-left: 2em;
+}
+
+.profile-image img {
+  width: auto;
+  height: 15em;
+  border-radius: 5px;
+  transform: skewX(20deg);
+  /* z-index: 20; */
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  margin-top: 30%;
+  /* margin-top: 100%; */
+}
+
+.text-content {
+  /* padding: 20px; */
+  max-width: 900px;
+  padding-right: 30px;
+  transform: skewX(0deg);
+  margin-left: 5px;
+  padding-left: 10px;
+  height: auto;
+  font-size: 10px;
+  font-family: "DM Sans", sans-serif;
+  color: #717B85;
+}
+
+.text-content .description {
+  font-size: 14px;
+  /* color: #333; */
+  transform: skewX(20deg);
+ margin-left: 10px;
+ padding-left: 10px;
+ /* padding-bottom: 18%; */
+  
+}
+
+.name-tag {
+  margin-top: 10px;
+  background-color: #006837;
+  color: #fff;
+  display: inline-block;
+  /* padding: 6px 5px; */
+  border-radius: 5px;
+  transform: skewX(0deg);
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  line-height:5px;
+  text-align: center;
+  margin-bottom: 2em;
+
+  bottom: 0;
+  right: 0;
+
+  margin-top: 10%;
+  /* margin-top: 100%; */
+
+}
+
+.name-tag .name {
+  font-weight: bold;
+  font-size: 10px;
+  transform: skewX(20deg);
+}
+
+.name-tag .role {
+  font-size: 8px;
+  /* margin-top: 3px; */
+  transform: skewX(20deg);
+}
+
+.profile-card::before,
+.profile-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 100%;
+  /* background-color: #333; */
+  /* top: 0;
+  z-index: 0 */
+}
+
+.profile-card::before {
+  left: -50px;
+  transform: skewX(-20deg);
+}
+
+.profile-card::after {
+  right: -50px;
+  transform: skewX(20deg);
+}

@@ -3,7 +3,7 @@
 const GlobalIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="400"
+    width="204"
     height="104"
     fill="none"
     viewBox="0 0 104 104"

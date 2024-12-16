@@ -1,8 +1,15 @@
-import Home from "./pages/home/Home";
-import "./App.css";
-// import TeamSlider from "./components/slider/TeamSlider";
+// import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Router from './pages/routes/Router';
+// import Home from './pages/home/Home';
 const App = () => {
-  return <Home className="home" />;
-};
+  return (
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={< />} />
+    //   </Routes> 
+    // </BrowserRouter>
+    <Router/>
+  )
+}
 
-export default App;
+export default App

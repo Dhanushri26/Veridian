@@ -1,63 +1,68 @@
+/* eslint-disable no-undef */
 import { Box, Grid2, Typography } from "@mui/material";
-import Logo from '../../assets/Mask group.svg';
+import Logo from "../../assets/Mask group.svg";
 import BadgeIcon from "../../icons/Badge";
 import IdeaIcon from "../../icons/Idea";
 import GiveIcon from "../../icons/Give";
 import GlobalIcon from "../../icons/Global";
+import bg from "../../assets/Pattern BG.png";
+// import Sliding from "../slider/Sliding";
+import TeamSwiper from "../slider/TeamSwiper";
 
 const Boxes = () => {
   return (
     <Grid2 sx={style.grid}>
-      
       <Grid2 size={12} sx={style.grid1}>
-      <Typography sx={style.typo}>About Us</Typography>
+        <Typography sx={style.typo}>About Us</Typography>
         <Box sx={style.boxed1}>
-          
-            <Box sx={style.boxed2}>
-              <img src={Logo} alt="Logo" style={{ height: "8em",marginTop:'0.5em' }} />
-            </Box>
-        
-          <Grid2 size={8}>
+          <Box sx={style.boxed2}>
+            <img
+              src={Logo}
+              alt="Logo"
+              style={{ height: "8em", marginTop: "0.5em" }}
+            />
+          </Box>
+
+          <Grid2 size={8} sx={{ height: "auto" }}>
             <Typography sx={style.typo1}>
               Veridian is an investment, management and development company
               based in Gibraltar. We create value in our investments by
               leveraging our own experience, using tried-and-true strategies and
-              extensive industry expertise.</Typography>
-              <Typography sx={style.typo1}>
-               We work with our business management
-              team to develop and implement tailored strategies focused on
-              strong products with powerful sales, to develop profit generating
-              growth models. Value creation is fundamental to our goal and we
-              develop our businesses with this is mind.</Typography> 
-              <Typography sx={style.typo1}>
-              Veridian&apos;s
-              expertise is delivered with a responsible approach to our
-              business, our team, our local community, and the environment.
+              extensive industry expertise.
+            </Typography>
+            <Typography sx={style.typo1}>
+              We work with our business management team to develop and implement
+              tailored strategies focused on strong products with powerful
+              sales, to develop profit generating growth models. Value creation
+              is fundamental to our goal and we develop our businesses with this
+              is mind.
+            </Typography>
+            <Typography sx={style.typo1}>
+              Veridian&apos;s expertise is delivered with a responsible approach
+              to our business, our team, our local community, and the
+              environment.
             </Typography>
           </Grid2>
         </Box>
       </Grid2>
-      <Grid2 container spacing={5} sx={{ display: "flex", justifyContent: "space-evenly",width:'98%',margin:'auto' }}>
-      {data.map((item, index) => (
-        <Grid2
-          key={index}
-          size={5}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <Box sx={style.boxed}>
-            <Typography sx={style.title}>{item.title}</Typography>
-            <Box sx={style.descriptionContainer}>
-              <Typography sx={style.description}>{item.description}</Typography>
-              {item.icon}
+      <Grid2 container spacing={5} sx={style.secondwholegrid}>
+        {data.map((item, index) => (
+          <Grid2 key={index} size={5} sx={style.internalgrid}>
+            <Box sx={style.boxed}>
+              <Typography sx={style.title}>{item.title}</Typography>
+              <Box sx={style.descriptionContainer}>
+                <Typography sx={style.description}>
+                  {item.description}
+                </Typography>
+                <div style={style.iconset}>{item.icon}</div>
+              </Box>
             </Box>
-          </Box>
-        </Grid2>
-      ))}
-    </Grid2>
+          </Grid2>
+        ))}
+      </Grid2>
+      <div id="Our Team">
+        <TeamSwiper sx={{ zIndex: 0, marginBottom: "2em" }} />
+      </div>
     </Grid2>
   );
 };
@@ -72,13 +77,31 @@ const style = {
   grid: {
     padding: "0",
     width: "95%",
-    justifyContent:'center',
+    justifyContent: "center",
     alignItems: "center",
-    height: "50em",
+    height: "75em",
     backgroundColor: "#d9eee9",
     margin: "auto",
     marginTop: "2em",
-    paddingBottom: "2em",
+    paddingBottom: "10em",
+    backgroundImage: `url(${bg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    fontFamily: "DM Sans",
+    "@media (max-width: 700px)": {
+      height: "auto",
+      paddingBottom: "2em",
+      width: "97.5%",
+    },
+  },
+  secondwholegrid: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    width: "98%",
+    margin: "auto",
+    "@media (max-width: 700px)": {
+      flexDirection: "column",
+    },
   },
   boxed1: {
     height: "15em",
@@ -86,18 +109,48 @@ const style = {
     margin: "auto",
     display: "flex",
     justifyContent: "space-evenly",
-    backgroundColor:'white'
+    backgroundColor: "white",
+    "@media (max-width: 700px)": {
+      flexDirection: "column",
+      height: "auto",
+      width: "100%",
+      backgroundColor: "white",
+    },
+  },
+  internalgrid: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    "@media (max-width: 700px)": {
+    flexDirection: "column",
+    
+    width: "90%",
+    margin: "auto",
+    backgroundColor: "white",
+  
+    }
   },
   grid1: {
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
     marginBottom: "2em",
+    height: "auto",
+    "@media (max-width: 700px)": {
+      textAlign: "center",
+      backgroundColor: "#d9eee9",
+      marginInline: "-0.3em",
+    },
   },
   typo: {
-    fontSize: "1.5em",
+    fontSize: "1.2em",
     margin: "1em",
     paddingTop: "1em",
+    fontWeight: "bold",
+    "@media (max-width: 700px)": {
+      fontSize: "1.5em",
+      marginTop: "-8%",
+    },
   },
   layer1: {
     justifyContent: "space-between",
@@ -106,8 +159,8 @@ const style = {
     // display:'flex',
     // flexDirection:'column'
   },
+  
   boxed2: {
-   
     height: "10em",
     backgroundColor: "#e1f0ed",
     width: "50em",
@@ -116,6 +169,13 @@ const style = {
     marginLeft: "2em",
     justifyContent: "center",
     alignItems: "center",
+    "@media (max-width: 700px)": {
+      margin: "auto",
+      width: "96%",
+      paddingTop: "2em",
+      paddingBottom: "2em",
+      marginTop: "1em",
+    },
   },
   typo1: {
     fontSize: "0.9em",
@@ -124,68 +184,103 @@ const style = {
     margin: "auto",
     marginTop: "1em",
     textAlign: "left",
+    fontFamily: "DM Sans",
+    color: "#717B85",
+    "@media (max-width: 700px)": {
+      marginBottom: "2em",
+    },
     // paddingLeft: "10em",
   },
   boxed: {
-   
-    
-   
     width: "100%",
     height: "10em",
     justifyContent: "space-between",
-    backgroundColor: "#f9f9f9",
-    
+    backgroundColor: "#ffffff",
+    "@media (max-width: 700px)": {
+      flexDirection: "column",
+      height: "auto",
+      width: "100%",
+      // justifyContent: "flex-start",
+      marginBottom: "1.5em",
+      padding: "1em",
+    },
   },
   title: {
     fontSize: "1em",
     fontWeight: "bold",
-    marginBottom: "0.5em",
-    marginLeft:'0.5em',
-    paddingTop:'0.5em'
+    // marginBottom: "0.5em",
+    marginLeft: "1.5em",
+    paddingTop: "1em",
+    "@media (max-width: 700px)": {
+      marginLeft: "0",
+      textAlign: "center",
+    },
   },
   descriptionContainer: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
+    // alignItems: "center",
     // gap: "1em",
-    width:'98%',
-    marginLeft:'0.5em',
-    paddingTop:'0em'
+    width: "98%",
+    marginLeft: "0.5em",
+    height: "3em",
+    "@media (max-width: 700px)": {
+      flexDirection: "column",
+      height: "auto",
+      width: "90%",
+      marginBottom: "1.5em",
+      padding: "1em",
+     
+     
+    },
   },
   description: {
-    fontSize: "1em",
-    color: "#333",
+    fontSize: "0.8em",
+    backgroundColor: "#ffffff",
     flexGrow: 1,
-    marginLeft:'0.5em',
-    
+    marginLeft: "1.2em",
+    marginTop: "0.5em",
     textAlign: "justify",
+    width: "70%",
+    fontFamily: "DM Sans",
+    color: "#717B85",
+    "@media (max-width: 700px)": {
+      width: "100%",
+      marginLeft: "0",
+      marginTop: "0.5em",
+      fontSize: "0.9em",
+      textAlign: "center",
+    },
   },
 };
-
 
 const data = [
   {
     title: "Excellence",
     description:
       "We strive for excellence by continuously honing our skills & expanding our knowledge. Our commitment to excellence drives innovation and quality, setting us apart as leaders in our field.",
-    icon: <BadgeIcon sx={{ fontSize: "1em", color: "#f3a31b",paddingTop:'-1em' }} />,
+    icon: (
+      <BadgeIcon
+        sx={{ fontSize: "1em", color: "#f3a31b", paddingTop: "-1em" }}
+      />
+    ),
   },
   {
     title: "Initiative",
     description:
       "We encourage a proactive mindset where our team is empowered to take initiative and pursue opportunities for growth. We drive creativity and transformative solutions.",
-    icon: <IdeaIcon sx={{ fontSize: "3em", color: "#f3a31b" }} />,
+    icon: <IdeaIcon sx={{ fontSize: "2em", color: "#f3a31b" }} />,
   },
   {
     title: "Sustainability",
     description:
       "We are dedicated to sustainable practices that positively impact our community and environment. Our commitment to responsibility ensures we contribute to a better future for generations to come.",
-    icon: <GiveIcon sx={{ fontSize: "3em", color: "#f3a31b" }} />,
+    icon: <GiveIcon sx={{ fontSize: "2em", color: "#f3a31b" }} />,
   },
   {
     title: "Integrity",
     description:
       "We operate with honesty and uphold the highest ethical standards. Integrity is the cornerstone of our business, guiding our actions and decisions to earn the trust of our clients and partners.",
-    icon: <GlobalIcon sx={{ fontSize: "3em", color: "#f3a31b" }} />,
+    icon: <GlobalIcon sx={{ fontSize: "2em", color: "#f3a31b" }} />,
   },
 ];

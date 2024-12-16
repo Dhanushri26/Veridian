@@ -122,7 +122,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    position: "relative",  
+    position: "relative",
     maxWidth: "98%",
     margin: "auto",
     overflow: "hidden",
@@ -148,8 +148,8 @@ const styles = {
   imageWrapper: {
     position: "absolute",
     width: "60%",
-    height: "100%",
-    transition: "transform 0.5s ease, opacity 0.5s ease",
+    height: "120%",
+    transition: "transform 1s ease, opacity 0.5s ease",
   },
   image: {
     width: "100%",

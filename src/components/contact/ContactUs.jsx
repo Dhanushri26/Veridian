@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import backgroundimg from '../../assets/ContactBg.png';
 const ContactUs = () => {
   return (
     <Box sx={style.contact}>
@@ -23,28 +24,42 @@ const style = {
   contact: {
     width: "95%",
     height: "18em",
-    backgroundColor: "#01825c",
+    // backgroundColor: "#01825c",
+    background: `url(${backgroundimg})`,
     margin: "auto",
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
     marginBottom: "2em",
+    "@media (max-width: 600px)": {
+      width: "100%",
+      marginTop:"-7em",
+    }
   },
   textContact: {
     color: "white",
     fontSize: "2em",
     paddingTop: "3rem",
+    "@media (max-width: 600px)": {
+      width: "100%",
+    }
   },
   textmore: {
     color: "white",
     fontSize: "1em",
     paddingTop: "1rem",
+    paddingBottom: "1rem",
+    fontFamily: "DM Sans",
+    "@media (max-width: 600px)": {
+      width: "90%",
+    }
   },
   outbutton: {
     backgroundColor:'#006547',
     color: "white",
   textTransform: "none",
 fontWeight: "bold",
+fontFamily: "DM Sans",
 },
   inbutton: {
     backgroundColor:'#f9c300',
@@ -52,6 +67,7 @@ fontWeight: "bold",
     fontWeight: "bold",
     borderRadius: "0",
     marginRight: "1em",
+    fontFamily: "DM Sans",
   },
   move: {
     transform: "rotate(90deg)",
