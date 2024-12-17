@@ -1,11 +1,9 @@
-import { Dialog, DialogContent } from '@mui/material'
+import { Box } from '@mui/material'
 const Dialogue = () => {
   return (
-    <Dialog>
-     <DialogContent>
-      Hi Hello!!
-     </DialogContent>
-    </Dialog>
+    <Box>
+      Hi hello!!!
+    </Box>
   )
 }
 

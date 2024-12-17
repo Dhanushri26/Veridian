@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box, Button, Dialog, DialogContent, Typography } from "@mui/material"
 import { useState } from "react";
 import Dialogue from "../Dialogue/Dialogue";
 const Footer = () => {
@@ -6,25 +6,25 @@ const Footer = () => {
  const handleDialogue = () => {
    setOpenDialogue(true);
  }
-
   return (
-    <Box sx={style.footer}>
-      
+    <Box sx={style.footer}>    
       <Typography sx={style.copyright}>COPYRIGHT © Veridian 2024. All rights reserved. Any and all content included on this website or incorporated by reference is protected by international copyright laws.</Typography>
       <Button onClick={handleDialogue} sx={style.terms}>
       {openDialogue && 
-      <Dialogue/>
+      <Dialog open={openDialogue}>
+        <DialogContent>
+              <Dialogue/>
+              </DialogContent>
+      </Dialog>
+
     }
       <Typography sx={style.terms}>
         Terms of use
       </Typography>
       </Button>
-    </Box>
-
-    
+    </Box>    
   )
 }
-
 export default Footer
 
 const style = {
@@ -39,9 +39,9 @@ const style = {
     alignItems: "center",
     "@media (max-width: 700px)": {
       width: "100%",
-      height: "5em",
-    }
-    
+      height: "5em", 
+      flexDirection: "column",
+    }  
   },
   copyright: {
    color:'gray',
@@ -49,7 +49,7 @@ const style = {
     textAlign: "center",
     fontFamily: "DM Sans",
     "@media (max-width: 700px)": {
-      fontSize: "0.7em",
+      fontSize: "0.7em",     
     }
   },
   terms: {

@@ -1,16 +1,18 @@
 .profile-card {
   width: 100%;
-  max-width:1000px;
+  min-width: 810px;
   padding: 2em;
   position: relative;
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
   border-radius: 8px;
   margin: 2%;
-  height: 20em;
+  height: 30em;
   padding-inline: 4em;
- }
+  margin-bottom: 0;
+}
 
 .content-wrapper {
   display: flex;
@@ -19,7 +21,7 @@
   background: #fff;
   position: relative;
   transform: skewX(-20deg);
-  width:'96%';
+  width: "96%";
   padding: 1em;
   text-align: left;
   margin-left: 2em;
@@ -27,72 +29,64 @@
 
 .profile-image img {
   width: auto;
-  height: 15em;
+  height: 16em;
   border-radius: 5px;
   transform: skewX(20deg);
-  /* z-index: 20; */
   bottom: 0;
-  right: 0;
+  left: 0;
   z-index: 1;
   margin-top: 30%;
-  /* margin-top: 100%; */
+  position: absolute;
 }
 
 .text-content {
-  /* padding: 20px; */
   max-width: 900px;
   padding-right: 30px;
   transform: skewX(0deg);
-  margin-left: 5px;
+  margin-left: 10%;
   padding-left: 10px;
-  height: auto;
+  height: 30em;
   font-size: 10px;
   font-family: "DM Sans", sans-serif;
-  color: #717B85;
+  color: #717b85;
 }
 
 .text-content .description {
   font-size: 14px;
-  /* color: #333; */
   transform: skewX(20deg);
- margin-left: 10px;
- padding-left: 10px;
- /* padding-bottom: 18%; */
-  
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .name-tag {
-  margin-top: 10px;
   background-color: #006837;
+  background-repeat: no-repeat;
   color: #fff;
   display: inline-block;
-  /* padding: 6px 5px; */
-  border-radius: 5px;
+  position: absolute;
   transform: skewX(0deg);
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
-  line-height:5px;
-  text-align: center;
-  margin-bottom: 2em;
-
+  bottom: -1;
+  left: 10em;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  line-height: 5px;
+  text-align: end;
+  width: 26em;
+  padding-right: 2em;
+  height: 5em;
   bottom: 0;
   right: 0;
-
-  margin-top: 10%;
-  /* margin-top: 100%; */
-
+  z-index: 1;
 }
 
 .name-tag .name {
   font-weight: bold;
-  font-size: 10px;
+  font-size: 15px;
   transform: skewX(20deg);
 }
 
 .name-tag .role {
-  font-size: 8px;
-  /* margin-top: 3px; */
+  font-size: 10px;
   transform: skewX(20deg);
 }
 
@@ -100,19 +94,165 @@
 .profile-card::after {
   content: "";
   position: absolute;
-  width: 120px;
+  width: 170px;
   height: 100%;
-  /* background-color: #333; */
-  /* top: 0;
-  z-index: 0 */
 }
 
 .profile-card::before {
-  left: -50px;
+  left: -20px;
   transform: skewX(-20deg);
 }
 
 .profile-card::after {
   right: -50px;
   transform: skewX(20deg);
+}
+
+@media screen and (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    display: flex;
+    height: 40em;
+    background-color: #fff;
+    width: 8em;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: -30%;
+  }
+
+  .content-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    width: 50%;
+    overflow: wrap;
+    text-overflow: clip;
+    transform: skewX(0deg);
+    margin-inline: "2em";
+    font-size: small;
+  }
+
+  .profile-image img {
+    width: auto;
+    transform: skewX(0deg);
+    height: 15em;
+  }
+
+  .text-content {
+    padding: 0;
+    width: 90%;
+    padding-right: 0px;
+    transform: skewX(-20deg);
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 12px;
+    display: flex;
+  }
+  .text-content .description {
+    margin-left: 10%;
+    padding-left: 0;
+    width: 25em;
+    text-align: start;
+
+  }
+  .name-tag {
+    width: 14em;
+    text-overflow: ellipsis;
+  }
+
+  .profile-card::before,
+  .profile-card::after {
+    display: none;
+  }
+  .name-tag {
+    width: 14em;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    padding: 1.5em;
+    height: 70em; 
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin-left: 0;
+    width: 80%;
+  }
+
+  .profile-image img {
+    position: relative;
+    margin-top: 0;
+    transform: skewX(0deg); /* Remove the skew on mobile */
+    width: 100%;
+    height: auto;
+    margin-left: 3em;
+  }
+
+  .text-content {
+    margin-left: -25%; /* Remove margin */
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+    font-size: 14px;
+    width: 25%;
+    height: auto;
+    word-wrap: break-word;
+    text-align: left; 
+    flex-direction: column-reverse;
+    /* Center-align text on mobile */
+  }
+  .text-content .description {
+    margin-left: 3em;
+  }
+  .name-tag {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    left: -10%;
+    transform: skewX(-20deg);
+    transform: skewX(0deg);
+    bottom: 0;
+    padding: 1em;
+    padding-top: 0em;
+    height: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .name-tag::before {
+    content: "";
+    position: absolute;
+    width: 25px; 
+    height: 80px; 
+    background-color:white; /* Square color */
+    top: 0%; /* Center vertically */
+    left: -10px; /* Place it slightly outside the container */
+    transform: translateY(-50%); /* Center it perfectly */
+    z-index: 1; /* Send it behind the text */
+    transform: skewX(20deg);
+  }
+  .name-tag .name {
+    font-size: 14px;
+  }
+ 
+  .name-tag .role {
+    font-size: 12px;
+  }
 }

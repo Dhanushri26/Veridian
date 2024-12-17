@@ -24,7 +24,6 @@ const style = {
   contact: {
     width: "95%",
     height: "18em",
-    // backgroundColor: "#01825c",
     background: `url(${backgroundimg})`,
     margin: "auto",
     justifyContent: "center",
@@ -42,6 +41,7 @@ const style = {
     paddingTop: "3rem",
     "@media (max-width: 600px)": {
       width: "100%",
+      textAlign:"center"
     }
   },
   textmore: {
@@ -52,6 +52,8 @@ const style = {
     fontFamily: "DM Sans",
     "@media (max-width: 600px)": {
       width: "90%",
+      textAlign:"center",
+      margin: "auto"
     }
   },
   outbutton: {

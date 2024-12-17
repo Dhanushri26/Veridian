@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+
 import { Box, Grid2, Typography } from "@mui/material";
 import Logo from "../../assets/Mask group.svg";
 import BadgeIcon from "../../icons/Badge";
@@ -6,7 +6,6 @@ import IdeaIcon from "../../icons/Idea";
 import GiveIcon from "../../icons/Give";
 import GlobalIcon from "../../icons/Global";
 import bg from "../../assets/Pattern BG.png";
-// import Sliding from "../slider/Sliding";
 import TeamSwiper from "../slider/TeamSwiper";
 
 const Boxes = () => {
@@ -69,11 +68,6 @@ const Boxes = () => {
 
 export default Boxes;
 const style = {
-  // boxed: {
-  //   border: "1px solid black",
-  //   height: "12em",
-  //   width: "40%",
-  // },
   grid: {
     padding: "0",
     width: "95%",
@@ -91,7 +85,8 @@ const style = {
     "@media (max-width: 700px)": {
       height: "auto",
       paddingBottom: "2em",
-      width: "97.5%",
+      width: "100%",
+      backgroundColor:"#d9eee9",
     },
   },
   secondwholegrid: {
@@ -100,7 +95,13 @@ const style = {
     width: "98%",
     margin: "auto",
     "@media (max-width: 700px)": {
-      flexDirection: "column",
+      flexDirection: "column-reverse",
+      height: "auto",
+      justifyContent: "center",
+      alignItems: "center",
+      textAlign:"left",
+      width: "94%",
+      margin: "auto",
     },
   },
   boxed1: {
@@ -113,7 +114,7 @@ const style = {
     "@media (max-width: 700px)": {
       flexDirection: "column",
       height: "auto",
-      width: "100%",
+      width: "94%",
       backgroundColor: "white",
     },
   },
@@ -122,12 +123,12 @@ const style = {
     alignItems: "center",
     justifyContent: "space-evenly",
     "@media (max-width: 700px)": {
-    flexDirection: "column",
-    
-    width: "90%",
+    flexDirection: "column-reverse",
+    width: "100%",
     margin: "auto",
     backgroundColor: "white",
-  
+    height: "auto",
+      
     }
   },
   grid1: {
@@ -139,7 +140,7 @@ const style = {
     "@media (max-width: 700px)": {
       textAlign: "center",
       backgroundColor: "#d9eee9",
-      marginInline: "-0.3em",
+      width: "100%",
     },
   },
   typo: {
@@ -154,10 +155,6 @@ const style = {
   },
   layer1: {
     justifyContent: "space-between",
-
-    // spacing:'6em',
-    // display:'flex',
-    // flexDirection:'column'
   },
   
   boxed2: {
@@ -172,9 +169,10 @@ const style = {
     "@media (max-width: 700px)": {
       margin: "auto",
       width: "96%",
-      paddingTop: "2em",
-      paddingBottom: "2em",
+      paddingTop: "1em",
+      paddingBottom: "1em",
       marginTop: "1em",
+      backgroundColor:"#d9eee9"
     },
   },
   typo1: {
@@ -189,7 +187,6 @@ const style = {
     "@media (max-width: 700px)": {
       marginBottom: "2em",
     },
-    // paddingLeft: "10em",
   },
   boxed: {
     width: "100%",
@@ -197,18 +194,16 @@ const style = {
     justifyContent: "space-between",
     backgroundColor: "#ffffff",
     "@media (max-width: 700px)": {
-      flexDirection: "column",
+      flexDirection: "column-reverse",
       height: "auto",
       width: "100%",
-      // justifyContent: "flex-start",
       marginBottom: "1.5em",
-      padding: "1em",
+     
     },
   },
   title: {
     fontSize: "1em",
     fontWeight: "bold",
-    // marginBottom: "0.5em",
     marginLeft: "1.5em",
     paddingTop: "1em",
     "@media (max-width: 700px)": {
@@ -219,8 +214,6 @@ const style = {
   descriptionContainer: {
     display: "flex",
     justifyContent: "space-between",
-    // alignItems: "center",
-    // gap: "1em",
     width: "98%",
     marginLeft: "0.5em",
     height: "3em",
@@ -229,9 +222,7 @@ const style = {
       height: "auto",
       width: "90%",
       marginBottom: "1.5em",
-      padding: "1em",
-     
-     
+      padding: "1em", 
     },
   },
   description: {
@@ -259,11 +250,7 @@ const data = [
     title: "Excellence",
     description:
       "We strive for excellence by continuously honing our skills & expanding our knowledge. Our commitment to excellence drives innovation and quality, setting us apart as leaders in our field.",
-    icon: (
-      <BadgeIcon
-        sx={{ fontSize: "1em", color: "#f3a31b", paddingTop: "-1em" }}
-      />
-    ),
+    icon: <BadgeIcon sx={{ fontSize: "1em", color: "#f3a31b", paddingTop: "-1em" }}/> 
   },
   {
     title: "Initiative",
