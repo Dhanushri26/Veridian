@@ -20,7 +20,7 @@ const TeamSwiper = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 700) {
-        setSlidesPerView(0.7);
+        setSlidesPerView(1);
       } else {
         setSlidesPerView(1.5);
       }
@@ -40,10 +40,12 @@ const TeamSwiper = () => {
         width: "100%",
         margin: "0 auto",
         position: "relative",
+        height: "auto",
+        // minHeight: "50em",
       }}
     >
       <Typography
-        sx={{ fontSize: "2em", marginTop: "1em", fontWeight: "bold" }}
+        sx={{ fontSize: "2em", marginTop: "2em", fontWeight: "bold" }}
       >
         Our Team
       </Typography>
@@ -60,7 +62,9 @@ const TeamSwiper = () => {
           fontSize: "1.5em",
           boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
           "&:hover": { backgroundColor: "#f0f0f0" },
+          display : {xs:"none",md:"block"}
         }}
+        
       >
         <ArrowBackIcon fontSize="medium" />
       </IconButton>
@@ -75,6 +79,7 @@ const TeamSwiper = () => {
           backgroundColor: "#11423f",
           color: "white",
           fontSize: "1.5em",
+          display : {xs:"none",md:"block"},
           boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
           "&:hover": { backgroundColor: "#f0f0f0" },
         }}
@@ -86,7 +91,7 @@ const TeamSwiper = () => {
         spaceBetween={20}
         slidesPerView={slidesPerView}
         centeredSlides={true}
-        pagination={{ clickable: true }}
+        pagination={window.innerWidth <= 700 ? { clickable: true } : false}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
@@ -103,8 +108,11 @@ const TeamSwiper = () => {
           color: "black",
           justifyContent: "flex-start",
           alignItems: "flex-start",
-          marginTop: "2rem",
+          marginTop: "0.5rem",
           overflow: "hidden",
+          height:"auto",
+          // minHeight:"80em",
+
           
         }}
       >

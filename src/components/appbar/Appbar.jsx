@@ -106,7 +106,8 @@ const style = {
   appBar: {
     backgroundColor: "white",
     color: "gray",
-    height: "5em",
+    height: "100%",
+    minHeight:"6em",
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
@@ -137,10 +138,10 @@ const style = {
   menuItem: {
     paddingBottom: "9px",
     display: "inline-block",
-    height: "2.5em",
+    height: "3em",
     fontWeight: 200,
     fontFamily: "'IBM Plex Serif', sans-serif",
-    marginTop: "-1em",
+    marginTop: "0em",
     "@media (max-width: 700px)": {
       display: "none",
     },

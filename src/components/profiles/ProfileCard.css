@@ -1,6 +1,6 @@
 .profile-card {
   width: 100%;
-  min-width: 810px;
+  max-width: 810px;
   padding: 2em;
   position: relative;
   display: flex;
@@ -11,7 +11,8 @@
   margin: 2%;
   height: 30em;
   padding-inline: 4em;
-  margin-bottom: -5em;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .content-wrapper {
@@ -112,55 +113,68 @@
   .profile-card {
     flex-direction: column;
     display: flex;
-    height: 40em;
+    /* height: 40em; */
     background-color: #fff;
-    width: 8em;
+    /* width: 3em; */
+    padding: 0;
+    width: auto;
+    min-width: 22em;
+   
+    max-width: 50em;
+    margin-left: 0;
+    
     overflow: hidden;
     position: relative;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     overflow: hidden;
-    border-radius: 8px;
-    margin: -30%;
+    /* border-radius: 8px; */
+    /* margin: -20%; */
   }
 
   .content-wrapper {
     flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-    padding: 1em;
-    width: 50%;
-    overflow: wrap;
-    text-overflow: clip;
+    /* align-items: center;
+    text-align: center; */
+    /* padding: 1em; */
+    /* width: 90%; */
+    /* overflow: wrap; */
+    /* text-overflow: clip; */
     transform: skewX(0deg);
-    margin-inline: "2em";
+    /* margin-inline: "2em"; */
     font-size: small;
+    margin:0;
+    padding:0;
+    width: 100%;
   }
 
   .profile-image img {
-    width: auto;
-    transform: skewX(0deg);
-    height: 15em;
+    /* width: auto; */
+     /* height: 25em; 
+    transform: skewX(0deg); */
+    /* height: 15em; */
   }
 
   .text-content {
     padding: 0;
-    width: 90%;
-    padding-right: 0px;
+    /* width: 90%; */
+    /* padding-right: 0px; */
     transform: skewX(-20deg);
-    margin-left: 0;
-    padding-left: 0;
+    /* margin-left: 0;
+    padding-left: 0; */
     font-size: 12px;
     display: flex;
+    align-items: flex-start;
   }
   .text-content .description {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     padding-left: 0;
-    width: 25em;
-    text-align: start;
+    /* width: 20em; */
+    /* text-align: start; */
   }
   .name-tag {
     width: 14em;
+    margin: 0;
     text-overflow: ellipsis;
   }
 
@@ -177,71 +191,90 @@
 @media (max-width: 600px) {
   .profile-card {
     flex-direction: column;
-    padding: 1.5em;
-    height: 70em;
-    width: 100%;
+    /* padding: 1.5em; */
+    height: auto;
+    /* width: 100%; */
+    margin-left: 20%;
+    width: 60%;
     overflow: hidden;
     position: relative;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     overflow: hidden;
+    margin-left:0 ;
+    margin-inline: auto;
+    /* justify-content: flex-start; */
   }
 
   .content-wrapper {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    margin-left: 0;
-    width: 80%;
+    /* align-items: center;
+    justify-content: center; */
+    /* padding: 1em; */
+    /* margin-left: 0; */
+    width: 98%;
   }
 
   .profile-image img {
     position: relative;
-    margin-top: 0;
+    /* margin-top: 0; */
     transform: skewX(0deg);
-    width: 100%;
-    height: auto;
-    margin-left: 3em;
+    height: 30em;
+    padding: 0;
+    /* left: -50%; */
+     width:auto; 
+    /* width: 100%;
+    min-height: 10em; */
+    /* margin-left: 3em; */
   }
 
   .text-content {
-    margin-left: -25%;
-    padding-left: 0;
-    padding-right: 0;
+    /* margin-left: -25%; */
+    /* padding-left: 0;
+    padding-right: 0; */
     font-size: 14px;
-    width: 25%;
-    height: auto;
-    word-wrap: break-word;
+    /* width: 100%; */
+    /* margin: auto;
+    height: auto; */
+    /* word-wrap: break-word; */
     text-align: left;
     flex-direction: column-reverse;
   }
   .text-content .description {
-    margin-left: 3em;
+    /* margin-left: 3em; */
+    margin:auto;
+    margin-top: 2em;
   }
   .name-tag {
     position: relative;
-    width: 100%;
-    text-align: center;
-    left: -10%;
-    transform: skewX(-20deg);
+    width: 90%;
+    text-align: left;
+    margin:0;
+    margin-left: -70%;
+    
+    /* left: -10%; */
+    /* left: -20%; */
+    
+    transform: skewX(-100deg);
     transform: skewX(0deg);
-    bottom: 0;
+    /* bottom: 0; */
     padding: 1em;
+    padding-left: 2em;
     padding-top: 0em;
     height: auto;
-    padding-left: 3em;
-    padding-right: 3em;
+    /* padding-left: 3em;
+    padding-right: 3em; */
   }
 
   .name-tag::before {
     content: "";
     position: absolute;
-    width: 2em;
+    width: 5em;
     height: 102%;
     background-color: white;
     top: 0%;
-    left:-12px;
+    left:-15%;
+    margin-bottom: 0;
     transform: translateY(-50%);
     z-index: 1;
     transform: skewX(20deg);

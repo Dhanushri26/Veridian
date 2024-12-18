@@ -29,10 +29,11 @@ const Intro = () => {
 
 const style = {
   intro: {
-    width: "97%",
+    width: "90%",
     background: `url(${background})`,
     backgroundSize: "cover",
-    height: "28rem",
+    height: "auto",
+    minHeight: "28rem",
     textAlign: "center",
     margin: "auto",
     marginTop:"3em",

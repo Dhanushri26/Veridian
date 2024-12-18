@@ -18,7 +18,7 @@ const Boxes = () => {
             <img
               src={Logo}
               alt="Logo"
-              style={{ height: "8em", marginTop: "0.5em" }}
+              style={{marginTop: "0.5em",minHeight:"6em" ,height:"auto"}}
             />
           </Box>
 
@@ -44,9 +44,9 @@ const Boxes = () => {
           </Grid2>
         </Box>
       </Grid2>
-      <Grid2 container spacing={5} sx={style.secondwholegrid}>
+      <Grid2 container spacing={2} sx={style.secondwholegrid}>
         {data.map((item, index) => (
-          <Grid2 key={index} size={5} sx={style.internalgrid}>
+          <Grid2 key={index} size={6} spacing={1} sx={style.internalgrid}>
             <Box sx={style.boxed}>
               
               <Typography sx={style.title}>{item.title}</Typography>
@@ -73,14 +73,16 @@ export default Boxes;
 const style = {
   grid: {
     padding: "0",
-    width: "97%",
+    width: "90%",
     justifyContent: "center",
     alignItems: "center",
-    height: "75em",
+    // minheight: "50em",
+    height: "auto",
     backgroundColor: "#d9eee9",
     margin: "auto",
     marginTop: "2em",
-    paddingBottom: "10em",
+    paddingBottom:0,
+    // paddingBottom: "10em",
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -95,8 +97,10 @@ const style = {
   secondwholegrid: {
     display: "flex",
     justifyContent: "space-evenly",
-    width: "98%",
+    width: "95%",
     margin: "auto",
+    height:"auto",
+    paddding:0,
     "@media (max-width: 700px)": {
      
       height: "auto",
@@ -108,8 +112,9 @@ const style = {
     },
   },
   boxed1: {
-    height: "15em",
-    width: "87%",
+    height: "auto",
+    minHeight: "15em",
+    width: "95%",
     margin: "auto",
     display: "flex",
     justifyContent: "space-evenly",
@@ -125,6 +130,7 @@ const style = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-evenly",
+    
     "@media (max-width: 700px)": {
     
     width: "100%",
@@ -161,7 +167,9 @@ const style = {
   },
   
   boxed2: {
-    height: "10em",
+   
+    height:"11em",
+    paddingBottom:0,
     backgroundColor: "#e1f0ed",
     width: "50em",
     display: "flex",
@@ -192,8 +200,9 @@ const style = {
     },
   },
   boxed: {
-    width: "100%",
-    height: "10em",
+    width: "98%",
+    height: "auto",
+    minHeight:"8.5em",
     justifyContent: "space-between",
     backgroundColor: "#ffffff",
     "@media (max-width: 700px)": {
@@ -224,14 +233,18 @@ const style = {
     justifyContent: "space-between",
     width: "98%",
     marginLeft: "0.5em",
-    height: "3em",
+    height: "auto",
+    minHeight:"4em",
+   
     "@media (max-width: 700px)": {
-      flexDirection: "column-reverse",
+      // flexDirection: "column-reverse",
       height: "12em",
       width: "90%",
       marginBottom: "1.5em",
       padding: "1em", 
-      paddingBottom:"-1em"
+      paddingBottom:"2em",
+      // bottom:0,
+      // position:"absolute"
     },
   },
   description: {
@@ -244,10 +257,12 @@ const style = {
     width: "70%",
     fontFamily: "DM Sans",
     color: "#717B85",
+    paddingLeft:"-1em",
     "@media (max-width: 700px)": {
       width: "90%",
       marginLeft: "0",
-      marginTop: "0.5em",
+      marginTop: "2em",
+      paddingTop:"-1em",
       fontSize: "0.9em",
       position:"absolute",
       bottom:0
@@ -261,6 +276,7 @@ const style = {
     }
   },
   iconbox:{
+    marginTop:"-1.5em",
     "@media (max-width: 700px)": {
       marginLeft:"-3.5em",
       position:"absolute",

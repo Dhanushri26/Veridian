@@ -22,7 +22,7 @@ export default ContactUs;
 
 const style = {
   contact: {
-    width: "97%",
+    width: "90%",
     height: "18em",
     background: `url(${backgroundimg})`,
     margin: "auto",
@@ -63,6 +63,8 @@ const style = {
 fontWeight: "bold",
 fontFamily: "DM Sans",
 padding:0,
+width:"18em",
+justifyContent:"space-between",
 
 },
   inbutton: {
@@ -70,16 +72,19 @@ padding:0,
     color:'black',
     fontWeight: "bold",
     borderRadius: "0",
-    marginRight: "1em",
+    marginRight: "0.3em",
     fontFamily: "DM Sans",
+    fontSize:"0.8em",
     padding:0,
-    marginLeft:"7px"
+    marginLeft:"10px",
+    
   },
   move: {
     transform: "rotate(90deg)",
     marginLeft: "0.5em",
     backgroundColor:"#005139",
     padding:'0.3em',
-    display:'inline-block'
+    display:'inline-block',
+    
   }
 };

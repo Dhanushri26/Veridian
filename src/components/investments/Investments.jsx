@@ -47,17 +47,17 @@ const Investments = () => {
         <IconButton
           ref={prevRef}
           sx={{
-            display: { xs: "block", md: "none" },
+            display: { xs: "none", md: "none" },
             position: "absolute",
-           marginTop:"8em",
+            marginTop: "8em",
             left: "1%",
             zIndex: 2,
             transform: "translateY(-50%)",
             backgroundColor: "#11423f",
             color: "white",
-            alignItems:"center",
-            height:"2em",
-            width:"2em",
+            alignItems: "center",
+            height: "2em",
+            width: "2em",
             "&:hover": { backgroundColor: "#f0f0f0" },
           }}
         >
@@ -66,14 +66,14 @@ const Investments = () => {
         <IconButton
           ref={nextRef}
           sx={{
-            display: { xs: "block", md: "none" },
+            display: { xs: "none", md: "none" },
             position: "absolute",
             // top: "700%"
-             marginTop:"8em",
+            marginTop: "8em",
             right: "1%",
             zIndex: 2,
-            height:"2em",
-            width:"2em",
+            height: "2em",
+            width: "2em",
             transform: "translateY(-50%)",
             backgroundColor: "#11423f",
             color: "white",
@@ -81,7 +81,7 @@ const Investments = () => {
             "&:hover": { backgroundColor: "#f0f0f0" },
           }}
         >
-          <ArrowForwardIcon fontSize="medium"  />
+          <ArrowForwardIcon fontSize="medium" />
         </IconButton>
         <Box sx={{ display: { xs: "block", md: "none" } }}>
           <Swiper
@@ -92,8 +92,8 @@ const Investments = () => {
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
+            pagination={{ clickable: true }}
             onSwiper={(swiper) => {
-             
               setTimeout(() => {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
@@ -114,7 +114,7 @@ const Investments = () => {
                       marginTop: "0.5rem",
                       paddingBottom: 0,
                       height: "12rem",
-                      width:"90%"
+                      width: "90%",
                     }}
                   />
                   <Typography sx={style.containertitle}>
@@ -159,6 +159,7 @@ const Investments = () => {
                     marginTop: "0.5rem",
                     paddingBottom: 0,
                     height: "12rem",
+                    width: "90%",
                   }}
                 />
                 <Typography sx={style.containertitle}>{item.title}</Typography>
@@ -187,14 +188,15 @@ export default Investments;
 
 const style = {
   investbox: {
-    width: "97%",
-    height: "52rem",
+    width: "90%",
+    height: "auto",
+    minHeight: "50em",
+    paddingBottom: "2em",
     margin: "auto",
     backgroundColor: "#d9eee9",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
     textAlign: "center",
-    paddingTop: "5rem",
     "@media (max-width: 700px)": {
       marginBottom: "3em",
       width: "100%",
@@ -214,12 +216,16 @@ const style = {
     alignItems: "center",
     backgroundColor: "white",
     width: "30%",
-    height: "38em",
+    height: "auto",
+    minHeight: "40em",
+    "@media (max-width: 700px)": {
+      height: "auto",
+      minHeight: "25em",
+    },
   },
   investtitle: {
     color: "black",
     fontSize: "1.5em",
-    paddingTop: "2rem",
     paddingBottom: "2rem",
     fontWeight: "bold",
   },
@@ -241,12 +247,20 @@ const style = {
     color: "#717B85",
     backgroundColor: "white",
     width: "96%",
-    height: "37em",
-    margin: "auto",
+    height: "auto",
+    margin: "",
+    justifyContent: "flex-start",
+    "@media (max-width: 700px)": {
+      paddingBottom: "2em",
+      marginBottom: "2em",
+      marginLeft: "0.5em",
+      minHeight: "35em",
+      // height:"auto",
+      // minHeight:"25em"
+    },
   },
 
   navButton: {
-    display:"none"
+    display: "none",
   },
-  
 };
