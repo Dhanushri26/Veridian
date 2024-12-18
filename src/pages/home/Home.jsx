@@ -33,7 +33,6 @@ const Home = () => {
   }, [selectedSection]);
   return (
     <ThemeProvider theme={theme}>
-      {/* <CssBaseline /> */}
       <Box sx={style.home}>
         <Appbar />
         <div id="Home">

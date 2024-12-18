@@ -110,6 +110,7 @@ const Investments = () => {
                       marginTop: "0.5rem",
                       paddingBottom: 0,
                       height: "12rem",
+                      width:"90%"
                     }}
                   />
                   <Typography sx={style.containertitle}>
@@ -182,7 +183,7 @@ export default Investments;
 
 const style = {
   investbox: {
-    width: "95%",
+    width: "97%",
     height: "52rem",
     margin: "auto",
     backgroundColor: "#d9eee9",

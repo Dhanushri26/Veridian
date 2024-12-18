@@ -9,8 +9,8 @@ import Profile1 from "../profiles/Profile1";
 import Profile2 from "../profiles/Profile2";
 import Profile3 from "../profiles/Profile3";
 import { Typography, IconButton } from "@mui/material";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 const TeamSwiper = () => {
   const [slidesPerView, setSlidesPerView] = useState(1.5);
 
@@ -42,7 +42,9 @@ const TeamSwiper = () => {
         position: "relative",
       }}
     >
-      <Typography sx={{ fontSize: "2em", marginTop: "1em", fontWeight: "bold" }}>
+      <Typography
+        sx={{ fontSize: "2em", marginTop: "1em", fontWeight: "bold" }}
+      >
         Our Team
       </Typography>
       <IconButton
@@ -54,7 +56,7 @@ const TeamSwiper = () => {
           zIndex: 2,
           transform: "translateY(-50%)",
           backgroundColor: "#11423f",
-          color:"white",
+          color: "white",
           fontSize: "1.5em",
           boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
           "&:hover": { backgroundColor: "#f0f0f0" },
@@ -62,7 +64,6 @@ const TeamSwiper = () => {
       >
         <ArrowBackIcon fontSize="medium" />
       </IconButton>
-
       <IconButton
         ref={nextRef}
         sx={{
@@ -72,7 +73,7 @@ const TeamSwiper = () => {
           zIndex: 2,
           transform: "translateY(-50%)",
           backgroundColor: "#11423f",
-          color:"white",
+          color: "white",
           fontSize: "1.5em",
           boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
           "&:hover": { backgroundColor: "#f0f0f0" },

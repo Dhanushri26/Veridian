@@ -22,7 +22,7 @@ export default ContactUs;
 
 const style = {
   contact: {
-    width: "95%",
+    width: "97%",
     height: "18em",
     background: `url(${backgroundimg})`,
     margin: "auto",
@@ -62,6 +62,8 @@ const style = {
   textTransform: "none",
 fontWeight: "bold",
 fontFamily: "DM Sans",
+padding:0,
+
 },
   inbutton: {
     backgroundColor:'#f9c300',
@@ -70,6 +72,8 @@ fontFamily: "DM Sans",
     borderRadius: "0",
     marginRight: "1em",
     fontFamily: "DM Sans",
+    padding:0,
+    marginLeft:"7px"
   },
   move: {
     transform: "rotate(90deg)",

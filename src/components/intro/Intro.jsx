@@ -1,14 +1,26 @@
+/* eslint-disable no-unused-vars */
 import { Box,Button,Typography } from "@mui/material";
 import SubdirectoryArrowLeftIcon from "@mui/icons-material/SubdirectoryArrowLeft";
 import background from '../../assets/Group 62.png';
+import useSectionStore from "../../useSectionStore";
 const Intro = () => {
+  const { selectedSection, setSelectedSection } = useSectionStore();
+
+  const handleSelect = (option) => {
+    setSelectedSection(option);
+    const sectionElement = document.getElementById(option);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+    }
+    
+  };
   return (
     <Box sx={style.intro}>
       <Typography sx={style.introwelcome}> INVESTMENT MANAGEMENT</Typography>
       <Typography sx={style.center}>
         Empowering Investments with Expertise and Strategy
       </Typography>
-      <Button sx={style.knowmore}>
+      <Button sx={style.knowmore} onClick={() => handleSelect("About Us")}>
         Know More <SubdirectoryArrowLeftIcon sx={style.knowicon} />
       </Button>
     </Box>
@@ -59,6 +71,7 @@ const style = {
   knowicon: {
     transform: "rotate(-90deg)",
     fontSize: "1.5em",
+    marginTop:"5px"
   },
 };
 export default Intro;

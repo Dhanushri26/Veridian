@@ -1,23 +1,23 @@
-import { Box, Button, Dialog, DialogContent, Typography } from "@mui/material"
-import { useState } from "react";
-import Dialogue from "../Dialogue/Dialogue";
+import { Box, Button, Typography } from "@mui/material"
+// import { useState } from "react";
+// import Dialogue from "../Dialogue/Dialogue";
 const Footer = () => {
-  const[openDialogue, setOpenDialogue] = useState(false);
- const handleDialogue = () => {
-   setOpenDialogue(true);
- }
+  // const[openDialogue, setOpenDialogue] = useState(false);
+//  const handleDialogue = () => {
+//    setOpenDialogue(true);
+//  }
   return (
     <Box sx={style.footer}>    
       <Typography sx={style.copyright}>COPYRIGHT © Veridian 2024. All rights reserved. Any and all content included on this website or incorporated by reference is protected by international copyright laws.</Typography>
-      <Button onClick={handleDialogue} sx={style.terms}>
-      {openDialogue && 
+      <Button sx={style.terms}>
+      {/* {openDialogue && 
       <Dialog open={openDialogue}>
         <DialogContent>
               <Dialogue/>
               </DialogContent>
       </Dialog>
 
-    }
+    } */}
       <Typography sx={style.terms}>
         Terms of use
       </Typography>

@@ -70,7 +70,7 @@ export default Boxes;
 const style = {
   grid: {
     padding: "0",
-    width: "95%",
+    width: "97%",
     justifyContent: "center",
     alignItems: "center",
     height: "75em",
