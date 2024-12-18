@@ -48,12 +48,15 @@ const Boxes = () => {
         {data.map((item, index) => (
           <Grid2 key={index} size={5} sx={style.internalgrid}>
             <Box sx={style.boxed}>
+              
               <Typography sx={style.title}>{item.title}</Typography>
               <Box sx={style.descriptionContainer}>
                 <Typography sx={style.description}>
                   {item.description}
                 </Typography>
-                <div style={style.iconset}>{item.icon}</div>
+                <Box sx={style.iconbox}>
+                <div>{item.icon}</div>
+                </Box>
               </Box>
             </Box>
           </Grid2>
@@ -95,7 +98,7 @@ const style = {
     width: "98%",
     margin: "auto",
     "@media (max-width: 700px)": {
-      flexDirection: "column-reverse",
+     
       height: "auto",
       justifyContent: "center",
       alignItems: "center",
@@ -123,7 +126,7 @@ const style = {
     alignItems: "center",
     justifyContent: "space-evenly",
     "@media (max-width: 700px)": {
-    flexDirection: "column-reverse",
+    
     width: "100%",
     margin: "auto",
     backgroundColor: "white",
@@ -194,10 +197,11 @@ const style = {
     justifyContent: "space-between",
     backgroundColor: "#ffffff",
     "@media (max-width: 700px)": {
-      flexDirection: "column-reverse",
+      position:"relative",
       height: "auto",
       width: "100%",
       marginBottom: "1.5em",
+    
      
     },
   },
@@ -207,8 +211,12 @@ const style = {
     marginLeft: "1.5em",
     paddingTop: "1em",
     "@media (max-width: 700px)": {
-      marginLeft: "0",
-      textAlign: "center",
+      top:"40%",
+      paddingTop:"8%",
+      position:"absolute",
+      textAlign: "left",
+      marginLeft:"6%",
+      display:"block"
     },
   },
   descriptionContainer: {
@@ -218,11 +226,12 @@ const style = {
     marginLeft: "0.5em",
     height: "3em",
     "@media (max-width: 700px)": {
-      flexDirection: "column",
-      height: "auto",
+      flexDirection: "column-reverse",
+      height: "12em",
       width: "90%",
       marginBottom: "1.5em",
       padding: "1em", 
+      paddingBottom:"-1em"
     },
   },
   description: {
@@ -236,14 +245,30 @@ const style = {
     fontFamily: "DM Sans",
     color: "#717B85",
     "@media (max-width: 700px)": {
-      width: "100%",
+      width: "90%",
       marginLeft: "0",
       marginTop: "0.5em",
       fontSize: "0.9em",
-      textAlign: "center",
+      position:"absolute",
+      bottom:0
+     
+     
     },
   },
+  iconset:{
+    "@media (max-width: 700px)": {
+     
+    }
+  },
+  iconbox:{
+    "@media (max-width: 700px)": {
+      marginLeft:"-3.5em",
+      position:"absolute",
+      top:25
+    }
+  }
 };
+
 
 const data = [
   {
@@ -261,8 +286,8 @@ const data = [
   {
     title: "Sustainability",
     description:
-      "We are dedicated to sustainable practices that positively impact our community and environment. Our commitment to responsibility ensures we contribute to a better future for generations to come.",
-    icon: <GiveIcon sx={{ fontSize: "2em", color: "#f3a31b" }} />,
+      "We are dedicated to sustainable practices that positively impact our community and environment , commitment to responsibility ensures we contribute to a better future for generations to come.",
+    icon: <GiveIcon sx={{ fontSize: "1em", color: "#f3a31b" }} />,
   },
   {
     title: "Integrity",

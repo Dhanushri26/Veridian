@@ -11,7 +11,7 @@
   margin: 2%;
   height: 30em;
   padding-inline: 4em;
-  margin-bottom: 0;
+  margin-bottom: -5em;
 }
 
 .content-wrapper {
@@ -158,7 +158,6 @@
     padding-left: 0;
     width: 25em;
     text-align: start;
-
   }
   .name-tag {
     width: 14em;
@@ -179,7 +178,7 @@
   .profile-card {
     flex-direction: column;
     padding: 1.5em;
-    height: 70em; 
+    height: 70em;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -200,23 +199,22 @@
   .profile-image img {
     position: relative;
     margin-top: 0;
-    transform: skewX(0deg); /* Remove the skew on mobile */
+    transform: skewX(0deg);
     width: 100%;
     height: auto;
     margin-left: 3em;
   }
 
   .text-content {
-    margin-left: -25%; /* Remove margin */
-    padding-left: 0; /* Remove left padding */
-    padding-right: 0; /* Remove right padding */
+    margin-left: -25%;
+    padding-left: 0;
+    padding-right: 0;
     font-size: 14px;
     width: 25%;
     height: auto;
     word-wrap: break-word;
-    text-align: left; 
+    text-align: left;
     flex-direction: column-reverse;
-    /* Center-align text on mobile */
   }
   .text-content .description {
     margin-left: 3em;
@@ -239,19 +237,19 @@
   .name-tag::before {
     content: "";
     position: absolute;
-    width: 25px; 
-    height: 80px; 
-    background-color:white; /* Square color */
-    top: 0%; /* Center vertically */
-    left: -10px; /* Place it slightly outside the container */
-    transform: translateY(-50%); /* Center it perfectly */
-    z-index: 1; /* Send it behind the text */
+    width: 2em;
+    height: 102%;
+    background-color: white;
+    top: 0%;
+    left:-12px;
+    transform: translateY(-50%);
+    z-index: 1;
     transform: skewX(20deg);
   }
   .name-tag .name {
     font-size: 14px;
   }
- 
+
   .name-tag .role {
     font-size: 12px;
   }

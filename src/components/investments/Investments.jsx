@@ -56,6 +56,8 @@ const Investments = () => {
             backgroundColor: "#11423f",
             color: "white",
             alignItems:"center",
+            height:"2em",
+            width:"2em",
             "&:hover": { backgroundColor: "#f0f0f0" },
           }}
         >
@@ -70,6 +72,8 @@ const Investments = () => {
              marginTop:"8em",
             right: "1%",
             zIndex: 2,
+            height:"2em",
+            width:"2em",
             transform: "translateY(-50%)",
             backgroundColor: "#11423f",
             color: "white",

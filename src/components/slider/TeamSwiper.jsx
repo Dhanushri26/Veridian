@@ -105,6 +105,7 @@ const TeamSwiper = () => {
           alignItems: "flex-start",
           marginTop: "2rem",
           overflow: "hidden",
+          
         }}
       >
         <SwiperSlide>
