@@ -9,10 +9,11 @@ import {
 } from "@mui/material";
 // import {useRef } from "react";
 import { useState } from "react";
-import Logo from "../../assets/Mask group.svg";
+//import Logo from "../../assets/Mask group.svg";
 import useSectionStore from "../../useSectionStore";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Logoicon from '../../assets/Veridian-Logo-01 1.svg';
 const Appbar = () => {
   // const [selected, setSelected] = useState("Home");
   const { selectedSection, setSelectedSection } = useSectionStore();
@@ -40,12 +41,13 @@ const Appbar = () => {
     <MuiAppbar sx={style.appBar}>
       <Box sx={style.top}>
         <img
-          src={Logo}
+          src={Logoicon}
           alt="Logo"
           style={{
-            height: "3.5em",
-            justifyContent: "flex-start",
+            height: "5em",
+            justifyContent: "center",
             paddingLeft: "3em",
+            // marginTop: "-.50em",
           }}
         />
         <Box sx={style.menu}>
@@ -107,7 +109,7 @@ const style = {
     backgroundColor: "white",
     color: "gray",
     height: "100%",
-    minHeight:"6em",
+    minHeight:"7em",
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
@@ -141,7 +143,7 @@ const style = {
     height: "3em",
     fontWeight: 200,
     fontFamily: "'IBM Plex Serif', sans-serif",
-    marginTop: "0em",
+    // marginTop: "-1em",
     "@media (max-width: 700px)": {
       display: "none",
     },

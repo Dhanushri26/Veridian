@@ -22,7 +22,7 @@ const Boxes = () => {
             />
           </Box>
 
-          <Grid2 size={8} sx={{ height: "auto" }}>
+          <Grid2 size={8} sx={{ height: "auto",margin:"auto" }}>
             <Typography sx={style.typo1}>
               Veridian is an investment, management and development company
               based in Gibraltar. We create value in our investments by
@@ -81,7 +81,7 @@ const style = {
     backgroundColor: "#d9eee9",
     margin: "auto",
     marginTop: "2em",
-    paddingBottom:0,
+    // paddingBottom:0,
     // paddingBottom: "10em",
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
@@ -136,8 +136,6 @@ const style = {
     width: "100%",
     margin: "auto",
     backgroundColor: "white",
-    height: "auto",
-      
     }
   },
   grid1: {
@@ -167,9 +165,11 @@ const style = {
   },
   
   boxed2: {
-   
-    height:"11em",
-    paddingBottom:0,
+    height: "auto",
+    minHeight:"11em",
+
+    paddingBottom:"1em",
+    marginBottom:"1.5em",
     backgroundColor: "#e1f0ed",
     width: "50em",
     display: "flex",
@@ -201,8 +201,8 @@ const style = {
   },
   boxed: {
     width: "98%",
-    height: "auto",
-    minHeight:"8.5em",
+    height: "100%",
+    minHeight:"9em",
     justifyContent: "space-between",
     backgroundColor: "#ffffff",
     "@media (max-width: 700px)": {

@@ -33,33 +33,37 @@ const style = {
     background: `url(${background})`,
     backgroundSize: "cover",
     height: "auto",
-    minHeight: "28rem",
+    minHeight: "34rem",
     textAlign: "center",
     margin: "auto",
     marginTop:"3em",
     "@media (max-width: 600px)": {
-      height: "40rem",
+      height:"auto",
+      minHeight: "40rem",
       paddingTop: "2rem",
       marginTop:"1rem",
       fontSize: "0.8em",
       width:"100%",
+
      
     },
   },
   introwelcome: {
     color: "white",
     fontSize: "0.8em",
-    marginTop: "5rem",
+    marginTop: "8rem",
     backgroundColor: "#f9c300",
     display: "inline-block",
-    padding: "0.2rem",
+    padding: "0.5rem",
+    fontFamily:"DM Sans",
+
   },
   center: {
     color: "white",
-    fontSize: "3em",
+    fontSize: "3.6em",
     width: "70%",
     margin: "auto",
-    marginTop: "0.5rem",
+    marginTop: "1.5rem",
     fontWeight: "bold",
   },
   knowmore: {
